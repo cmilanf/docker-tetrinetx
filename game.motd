@@ -1,0 +1,45 @@
+- ***************  Message of the day  ****************
+- Welcome to the dockerized Tetrinet Server!
+-
+- This Docker Image has been cooked as a proof of concept
+- for Global Azure Bootcamp 2017 - Madrid, Spain; but it
+- can be run anywhere, that is what containers are about.
+-
+- First time on Tetrinet? The game is fun and easy to learn!
+-    * English: http://www.magicstar.net/channels/tetrinet/howdo.php
+-    * Spanish: http://tetrinet.azurebootcamp.es
+-
+- QUICK START GUIDE
+- Play Tetris the usual way as fast as you can. Last
+- standing player or team win the match.
+-
+- Over the game you will recieve special blocks that
+- will be added to your inventory. You can throw their
+- power to each player number -1 to 6- in the field,
+- including yourself!
+-
+- Each special block can be offensive or defensive:
+-    * Defense:
+-       - C - Clear line
+-       - N - Nuke field. Clear all blocks. It is like
+-                 starting a new game!
+-       - G - Gravity. Clear any block gaps. Poweful!
+-    * Offensive:
+-       - A - Add line
+-       - R - Random block clear. Remove 10 random blocks
+-       - S - Switch field. Switch your field with the
+-                 one of the selected player.
+-       - B - Clear special blocks.
+-       - Q - Blockquake. Block shift randomly to left or
+-                 or right.
+-       - O - Block Bomb. Bombs 3x3 block portion of the
+-                 field and scatter it around.
+-
+- If you have commets or questions, please feel free to ask
+- Karloch about through:
+-    * Twitter: @cmilanf
+-    * Blog: https://calnus.com
+-    * HispaMSX: http://www.hispamsx.org
+-
+- *** End of motd
+-
