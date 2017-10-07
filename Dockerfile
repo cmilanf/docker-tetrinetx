@@ -1,15 +1,15 @@
-FROM alpine:3.5
+FROM alpine:latest
 
-LABEL title "Tetrinetx + Tetristats Docker Image"
-LABEL maintainer "Carlos Milán Figueredo"
-LABEL email "cmilanf@hispamsx.org"
-LABEL version "1.0"
-LABEL contrib1 "tetrinetx - http://tetrinetx.sourceforge.net"
-LABEL contrib2 "tetristats - https://github.com/fcambus/tetristats"
-LABEL url "https://calnus.com"
-LABEL twitter "@cmilanf"
-LABEL usage "docker run -d -p 31457:31457 -p 31458:31458 -p 80:80 -h myhostname.domain.com -e OP_PASSWORD=mypassword -e SPEC_PASSWORD=mypassword --name tetrix cmilanf/tetrinetx"
-LABEL thanksto "Beatriz Sebastián Peña"
+LABEL title="Tetrinetx + Tetristats Docker Image" \
+  maintainer="Carlos Milán Figueredo" \
+  email="cmilanf@hispamsx.org" \
+  version="1.0" \
+  contrib1="tetrinetx - http://tetrinetx.sourceforge.net" \
+  contrib2="tetristats - https://github.com/fcambus/tetristats" \
+  url="https://calnus.com" \
+  twitter="@cmilanf" \
+  usage="docker run -d -p 31457:31457 -p 31458:31458 -p 80:80 -h myhostname.domain.com -e OP_PASSWORD=mypassword -e SPEC_PASSWORD=mypassword --name tetrix cmilanf/tetrinetx" \
+  thanksto="Beatriz Sebastián Peña"
 
 RUN apk update \
  && apk add --no-cache nano nginx busybox nano openssl \
