@@ -20,6 +20,7 @@ spec:
       subdomain: azurebootcamp
       containers:
       - image: cmilanf/tetrinetx
+        imagePullPolicy: Always
         name: tetrinetx
         env:
         - name: OP_PASSWORD
