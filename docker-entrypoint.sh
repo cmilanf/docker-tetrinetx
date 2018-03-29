@@ -24,13 +24,13 @@ sed -i "s|spec_op_password=pass4word|spec_op_password=$SPEC_OP_PASSWORD |g" /opt
 while true
 do
    sleep 300
-   if [[ -z $(pidof tetrix.linux) ]]; then
+   if [ -z $(pidof tetrix.linux) ]; then
         /opt/tetrinetx/bin/tetrix.linux
    fi
-   if [[ -z $(pidof nginx) ]]; then
+   if [ -z $(pidof nginx) ]; then
         /usr/sbin/nginx
    fi
-   if [[ -z $(pidof crond) ]]; then
+   if [ -z $(pidof crond) ]; then
         /usr/sbin/crond
    fi
 done
