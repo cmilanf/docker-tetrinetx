@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tetrinetx
+  labels:
+    app: tetrinetx
+spec:
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+    - name: tetrinet
+      protocol: TCP
+      port: 31457
+    - name: tetrispec
+      protocol: TCP
+      port: 31458
+  selector:
+    app: tetrinetx
+  type: LoadBalancer
+  loadBalancerIP: 52.174.54.111
+  clusterIP: 10.0.1.1 # Default range: 10.0.0.0/16
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: tetrinetx
+  labels:
+    app: tetrinetx
+type: Opaque
+data:
+  op-pwd: cDRzc3cwcmQK # p4ssw0rd in base64
+  spec-pwd: cDRzc3cwcmQK # p4ssw0rd in base64
