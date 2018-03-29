@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.5
 
 LABEL title="Tetrinetx + Tetristats Docker Image" \
   maintainer="Carlos Milán Figueredo" \
