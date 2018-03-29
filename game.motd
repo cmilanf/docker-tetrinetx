@@ -5,6 +5,9 @@
 - for Global Azure Bootcamp 2017 - Madrid, Spain; but it
 - can be run anywhere, that is what containers are about.
 -
+- For Global Azure Bootcamp 2018, we run this image in
+- Azure Container Service (AKS), based on Kubernetes.
+-
 - First time on Tetrinet? The game is fun and easy to learn!
 -    * English: http://www.magicstar.net/channels/tetrinet/howdo.php
 -    * Spanish: http://tetrinet.azurebootcamp.es

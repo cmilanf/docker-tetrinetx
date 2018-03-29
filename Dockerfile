@@ -55,13 +55,11 @@ RUN sed -i "s|maxchannels=8|maxchannels=16 |g" /opt/tetrinetx/bin/game.conf \
  && sed -i "s|sd_timeout=0|sd_timeout=600 |g" /opt/tetrinetx/bin/game.conf
 
 ADD tetriweb.tar.gz /www
-
-COPY entrypoint.sh /opt
-RUN chmod +x /opt/entrypoint.sh
+COPY docker-entrypoint.sh /usr/local/bin/
 
 HEALTHCHECK --interval=5m --timeout=3s \
   CMD pidof tetrix.linux
 
 EXPOSE 31457 31458 80
 
-ENTRYPOINT /opt/entrypoint.sh
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
