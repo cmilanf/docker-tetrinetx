@@ -18,7 +18,7 @@ spec:
   selector:
     app: tetrinetx
   type: LoadBalancer
-  loadBalancerIP: 52.174.54.111
+  loadBalancerIP: 52.232.29.56
   clusterIP: 10.0.1.1 # Default range: 10.0.0.0/16
 ---
 apiVersion: v1
