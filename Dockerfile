@@ -24,7 +24,7 @@ RUN apk update \
 
 COPY nginx.conf /etc/nginx
 
-RUN wget -O /tmp/tetrinetx-1.13.16+qirc-1.40c.tar.gz http://prdownloads.sourceforge.net/tetrinetx/tetrinetx-1.13.16+qirc-1.40c.tar.gz?download \
+RUN wget --no-check-certificate -O /tmp/tetrinetx-1.13.16+qirc-1.40c.tar.gz http://prdownloads.sourceforge.net/tetrinetx/tetrinetx-1.13.16+qirc-1.40c.tar.gz?download \
  && tar -xzf /tmp/tetrinetx-1.13.16+qirc-1.40c.tar.gz -C /tmp \
  && mkdir /opt/tetrinetx \
  && mv -f /tmp/tetrinetx-1.13.16+qirc-1.40c/* /opt/tetrinetx
