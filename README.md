@@ -1,3 +1,4 @@
+## Tetrinetx for Docker
 [Tetrinet](http://tetrinet.info) is a cross-platform network-enabled Tetris multiplayer game that follows a simple client/server architecture. It is an easy-to-learn, fast, adictive network game. TetinetX is an opensource free implementation of the server that can be downloaded from http://tetrinetx.sourceforge.net
 
 This Docker Image has been created as part of the [Global Azure Bootcamp 2017 - Spain, Madrid](http://azurebootcamp.es), with a fully functional container than can be leveraged in almost any x64 based Linux environment, whatever it is hosted in on-premises or in the cloud.
@@ -6,7 +7,6 @@ This Docker Image has the following features:
 
   * **Image size:** ~35 MB. Lightweight optimized environment provided by [Alpine GNU/Linux](https://www.alpinelinux.org/).
   * **[Tetrinetx](http://tetrinetx.sourceforge.net/) server version:** 1.13.16+qirc1.40, latest stable release available.
-  * **[Tetristats](https://github.com/fcambus/tetristats)**. An HTML winlist generator, that is published via nginx server provided in the image.
   * **nginx**. Lightweight webserver for providing homepage, client download, instructions and winlist publishing.
   * **Exposed ports:** 31457/TCP (tetrinetx game server), 31458/TCP (tetrinetx spec server), 80/TCP (nginx web server).
 
