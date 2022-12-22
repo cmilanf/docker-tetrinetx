@@ -1,11 +1,11 @@
-FROM alpine:3.5
+FROM alpine:3.17
 ARG TETRINETX_URL="http://prdownloads.sourceforge.net/tetrinetx/tetrinetx-1.13.16+qirc-1.40c.tar.gz?download"
 ARG ADNS_NAME="adns-1.5.2"
 ARG ADNS_URL="http://www.chiark.greenend.org.uk/~ian/adns/ftp/${ADNS_NAME}.tar.gz"
 
 LABEL title="Tetrinetx Docker Image" \
   maintainer="Carlos Milán Figueredo" \
-  version="1.2" \
+  version="1.3" \
   contrib1="tetrinetx - http://tetrinetx.sourceforge.net" \
   url="https://calnus.com" \
   twitter="@cmilanf" \
