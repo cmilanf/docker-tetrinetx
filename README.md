@@ -1,5 +1,5 @@
 ## Tetrinetx for Docker
-[Tetrinet](http://tetrinet.info) is a cross-platform network-enabled Tetris multiplayer game that follows a simple client/server architecture. It is an easy-to-learn, fast, adictive network game. TetinetX is an opensource free implementation of the server that can be downloaded from https://tetrinetx.sourceforge.net
+[Tetrinet](https://en.wikipedia.org/wiki/TetriNET) is a cross-platform network-enabled Tetris multiplayer game that follows a simple client/server architecture. It is an easy-to-learn, fast, adictive network game. TetinetX is an opensource free implementation of the server that can be downloaded from https://tetrinetx.sourceforge.net
 
 This Docker Image has been created as part of the [Global Azure Bootcamp 2017 - Spain, Madrid](http://azurebootcamp.es), with a fully functional container than can be leveraged in almost any x64 based Linux environment, whatever it is hosted in on-premises or in the cloud.
 
@@ -12,10 +12,17 @@ This Docker Image has the following features:
 
 The image is officially published at [https://hub.docker.com/r/cmilanf/tetrinetx/](https://hub.docker.com/r/cmilanf/tetrinetx/).
 
-## DEPLOYING
+## CVE-1999-1060
+Tetrinetx has not been maintained in several decades, with the latest stable release dating back to year 1999. This version is affected by [CVE-1999-1060](https://www.cvedetails.com/cve/CVE-1999-1060/):
+
+> Buffer overflow in Tetrix TetriNet daemon 1.13.16 allows remote attackers to cause a denial of service and possibly execute arbitrary commands by connecting to port 31457 from a host with a long DNS hostname.
+
+I highly encourage to run this software isolated with limited privileges.
+
+## Deploying
 This image can be launched successfully with the following syntax:
 ```bash
-docker run -p 31457:31457 -p 31458:31458 -p 80:80 -d -h myhostname.com -e OP_PASSWORD=pass4word -e SPEC_PASSWORD=pass4word --name tetrix cmilanf/tetrinetx
+docker run -p 31457:31457 -p 31458:31458 -p 80:80 -d -h myhostname.com -e OP_PASSWORD=pass4word -e SPEC_PASSWORD=pass4word --name tetrix cmilanf/tetrinetx:latest
 ```
 
   * `-p 31457:31457 -p 31458:31458 -p 80:80`. Exposure of the container ports to host machine. Feel free to change this redirection as long as you keep the original EXPOSE.
@@ -26,16 +33,14 @@ docker run -p 31457:31457 -p 31458:31458 -p 80:80 -d -h myhostname.com -e OP_PAS
   * `--name tetrix`. The name of the container.
   * `cmilanf/tetrinetx`. The name of the image you are deploying.
 
-## USAGE
-Upon successful launch, you can start using right away the server by pointing your [TetriNET client](http://tetrinet.info/download-clients) to the domain name or IP of your server.
+## Usage
+Upon successful launch, you can start using right away the server by pointing your [TetriNET client](https://www.hispamsx.org/tetrinet) to the domain name or IP of your server.
 
 ![TetriNET connection screenshot](https://www.hispamsx.org/tetrinet/img/gabtetrinet2.png)
 
-A winlist of the running server will be published by HTTP, so you can use http://myserver.com form for public access. At container's first run, it will display NGINX welcome page. Each 15 minutes it will be updated with the latest winlist. It will look like this:
+![Game screen](https://www.hispamsx.org/tetrinet/img/tetrinetgab1.jpg)
 
-![Tetristats winlist](https://www.hispamsx.org/tetrinet/img/tetrinetgab1.jpg)
-
-*Maintainer: Carlos Milán Figueredo*
-*Twitter: [@cmilanf](https://twitter.com/cmilanf)*
-*https://calnus.com - http://www.hispamsx.org*
+*Maintainer: Carlos Milán Figueredo*  
+*Twitter: [@cmilanf](https://twitter.com/cmilanf)*  
+*https://calnus.com - http://www.hispamsx.org*  
 *Special thanks to [Beatriz Sebastián Peña](https://www.linkedin.com/in/beatrizsebastian/)*
